@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management System</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Student Management System</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" data-target="#collapsibleNavbar" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{students}">Student Management</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br/>
+<br/>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class="text-center">Update Student</h1>
+            <div class="card-body">
+                <form method="POST" th:action="@{/students/{id} (id = ${student.id})}" th:object="${student}">
+                    <div class="form-group">
+                        <label>Student First Name</label>
+                        <input
+                                class="form-control"
+                                name="firstName"
+                                placeholder="Enter Student First Name"
+                                th:field="*{firstName}"
+                                type="text"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Student last Name</label>
+                        <input
+                                class="form-control"
+                                name="lastName"
+                                placeholder="Enter Student Last Name"
+                                th:field="*{lastName}"
+                                type="text"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Student Email</label>
+                        <input
+                                class="form-control"
+                                name="email"
+                                placeholder="Enter Student Email"
+                                th:field="*{email}"
+                                type="email"
+                        />
+                    </div>
+
+                    <div class="box-footer text-center">
+                        <button class="btn btn-primary" type="submit">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
