@@ -10,4 +10,4 @@ Here we need to build the Student-Management-System, Using Thymeleaf and Spring 
     
     4. We need delete student information from our database
     
-![Screenshot (19)](https://user-images.githubusercontent.com/49556058/196370487-e1068b7a-494c-441d-8ead-329f86800f85.png)
+![Screenshot (19)](https://user-images.githubusercontent.com/49556058/196371105-3c0aa67d-2ce9-4d30-9dd0-b14706717fdf.png)
